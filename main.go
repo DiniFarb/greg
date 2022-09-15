@@ -72,13 +72,18 @@ func readStdin() (lines []string) {
 }
 
 func search(lines []string, searchTerms []string) {
+	atleastOneMatch := false
 	for i, line := range lines {
 		for _, term := range searchTerms {
 			if strings.Contains(line, term) {
 				s := strings.Replace(line, term, fmt.Sprintf("\033[31m%s\033[0m", term), -1)
 				fin := fmt.Sprintf("%d: %s", i, s)
 				fmt.Println(fin)
+				atleastOneMatch = true
 			}
 		}
+	}
+	if !atleastOneMatch {
+		fmt.Println("No matches found")
 	}
 }
