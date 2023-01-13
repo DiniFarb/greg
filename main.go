@@ -8,6 +8,8 @@ import (
 	"strings"
 )
 
+var printAll = flag.Bool("a", false, "print all lines")
+
 func main() {
 
 	const (
@@ -31,15 +33,7 @@ func main() {
 }
 
 func exitWithHelp() {
-	fmt.Println("****************  USE  *******************")
-	fmt.Println("")
-	fmt.Println("greg -p <path to file> <text to search>")
-	fmt.Println("")
-	fmt.Println("****************  OR   *******************")
-	fmt.Println("")
-	fmt.Println("some command | greg <text to search>")
-	fmt.Println("")
-	fmt.Println("******************************************")
+	fmt.Println("type 'greg --help' for help")
 	os.Exit(1)
 }
 
@@ -80,6 +74,11 @@ func search(lines []string, searchTerms []string) {
 				fin := fmt.Sprintf("%d: %s", i, s)
 				fmt.Println(fin)
 				atleastOneMatch = true
+			} else {
+				if *printAll {
+					fin := fmt.Sprintf("%d: %s", i, line)
+					fmt.Println(fin)
+				}
 			}
 		}
 	}
