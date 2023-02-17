@@ -16,13 +16,13 @@ cat <filepath> | greg <searchtext>
 ```
 
 ## Installation
-User powershell as administrator to install greg
+**Use powershell as administrator to install greg**
 
-# Install
+### Install
 ```shell
 iex(iwr -Uri "https://raw.githubusercontent.com/DiniFarb/greg/main/install.ps1" -UseBasicParsing)
 ```
-# Uninstall
+### Uninstall
 ```shell
 iex(iwr -Uri "https://raw.githubusercontent.com/DiniFarb/greg/main/uninstall.ps1" -UseBasicParsing)
 ```
