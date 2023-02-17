@@ -20,9 +20,9 @@ User powershell as administrator to install greg
 
 # Install
 ```shell
-iwr https://raw.githubusercontent.com/dinifarb/greg/main/install.ps1 -useb | iex
+iex(iwr -Uri "https://raw.githubusercontent.com/DiniFarb/greg/main/install.ps1" -UseBasicParsing)
 ```
 # Uninstall
 ```shell
-iwr https://raw.githubusercontent.com/dinifarb/greg/main/uninstall.ps1 -useb | iex
+iex(iwr -Uri "https://raw.githubusercontent.com/DiniFarb/greg/main/uninstall.ps1" -UseBasicParsing)
 ```
