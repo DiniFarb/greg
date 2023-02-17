@@ -16,5 +16,13 @@ cat <filepath> | greg <searchtext>
 ```
 
 ## Installation
+User powershell as administrator to install greg
 
-TODO... 
+# Install
+```shell
+iwr https://raw.githubusercontent.com/dinifarb/greg/main/install.ps1 -useb | iex
+```
+# Uninstall
+```shell
+iwr https://raw.githubusercontent.com/dinifarb/greg/main/uninstall.ps1 -useb | iex
+```
