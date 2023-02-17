@@ -13,5 +13,4 @@ try {
 } catch {
     $ex = $_.Exception
     Write-Error "Failed to uninstall greg: $ex"
-    exit 1
 }
