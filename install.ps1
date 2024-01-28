@@ -1,4 +1,4 @@
-$version = "v0.0.1-alpha"
+$version = "v0.0.2-alpha"
 $url = "https://github.com/DiniFarb/greg/releases/download/$version/greg.zip"
 "Install greg from $url"
 $installDir = "C:\Program Files\Greg"
