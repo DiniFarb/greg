@@ -1,13 +1,9 @@
 # `GREG`
-Greg is a very limited cli tool for using grep in windows. The only Thing it does is read from a file or stdin and print the lines that match the given text. 
-
-## TODO
-- [ ] Handle wrong inputs and wirte tests
-- [ ] Add option to not print the line number
+Greg is a very limited cli tool for using grep in windows. The only Thing it does is read stdin and print the lines that match the given pattern. 
 
 ## Usage
 ```shell
-<some command> | greg <searchtext>
+greg -h
 ```
 
 ## Installation
