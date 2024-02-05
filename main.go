@@ -13,11 +13,29 @@ var printBefore = flag.Int("b", 0, "print lines before the match")
 var printAfter = flag.Int("a", 0, "print lines after the match")
 
 func main() {
-
+    
 	if len(os.Args) < 2 {
 		exitWithHelp()
 	}
+	flag.Usage = func() {
+		fmt.Fprintf(os.Stdout, `
+   __ _ _ __ ___  __ _ 
+  / _  | '__/ _ \/ _  |
+ | (_| | | |  __/ (_| |
+  \__, |_|  \___|\__, |
+   __/ |          __/ |
+  |___/          |___/ 
+		
+  `)
+		fmt.Fprintf(os.Stdout, "<some command> | greg [OPTIONS] PATTERN\n")
+		fmt.Fprintf(os.Stdout, "\nOptions:\n")
+		flag.PrintDefaults()
+	}
 	flag.Parse()
+	input := readStdin()
+	if len(input) == 0 {
+		exitWithHelp()
+	}
 	search(readStdin(), flag.Args())
 	os.Exit(0)
 }
