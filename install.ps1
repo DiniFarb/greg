@@ -1,4 +1,7 @@
-$version = "v0.0.2-alpha"
+param(
+    [string]$version = "latest"
+)
+
 $url = "https://github.com/DiniFarb/greg/releases/download/$version/greg.zip"
 "Install greg from $url"
 $installDir = "C:\Program Files\Greg"
